@@ -39,3 +39,67 @@ services:
       - 8080:8080
     depends_on:
       - postgres
+  my-service-discovery:
+    build:
+      context: ./my-service-discovery/
+      dockerfile: Dockerfile
+    image: my-service-discovery
+    ports:
+      - 8761:8761
+    depends_on:
+      - postgres
+    networks:
+      - my-network
+  my-gateway:
+    build:
+      context: ./my-gateway/
+      dockerfile: Dockerfile
+    image: my-gateway
+    ports:
+      - 8090:8090
+    depends_on:
+      - my-service-discovery
+    networks:
+      - my-network
+  my-school:
+    build:
+      context: ./my-school/
+      dockerfile: Dockerfile
+    image: my-school
+    ports:
+      - 8081:8081
+    depends_on:
+      - postgres
+      - my-gateway
+      - my-service-discovery
+    networks:
+      - my-network
+  my-user:
+    build:
+      context: ./my-user/
+      dockerfile: Dockerfile
+    image: my-user
+    ports:
+      - 8082:8082
+    depends_on:
+      - postgres
+      - my-gateway
+      - my-service-discovery
+    networks:
+      - my-network
+  my-report:
+    build:
+      context: ./my-report/
+      dockerfile: Dockerfile
+    image: my-report
+    ports:
+      - 8083:8083
+    depends_on:
+      - postgres
+      - my-gateway
+      - my-service-discovery
+    networks:
+      - my-network
+networks:
+  my-network:
+    driver: bridge
