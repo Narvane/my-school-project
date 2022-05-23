@@ -13,4 +13,5 @@ public class RoutesProperties {
     private String urlMySchool;
     private String urlMyUser;
     private String urlMyReport;
+    private String urlKeyCloak;
 }
