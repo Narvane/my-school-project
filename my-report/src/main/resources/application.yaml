@@ -4,6 +4,11 @@ server:
 spring:
   application:
     name: my-report
+  data:
+    mongodb:
+      host: app_db
+      port: 27017
+      database: my-report
 
 eureka:
   instance:

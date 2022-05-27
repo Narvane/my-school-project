@@ -1,9 +1,19 @@
 server:
   port: 8081
+  servlet:
+    context-path: /my-school
 
 spring:
   application:
     name: my-school
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  datasource:
+    username: jdbc:postgresql://postgres:5432/my-school
+    url: postgres
+    password: postgres
+
 
 eureka:
   instance:
