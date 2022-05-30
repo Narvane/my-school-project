@@ -1,7 +1,7 @@
 package com.narvane.myschool.controller;
 
-import com.narvane.myschool.controller.input.SubjectInput;
-import com.narvane.myschool.controller.model.SubjectModel;
+import com.narvane.myschool.dto.input.SubjectInput;
+import com.narvane.myschool.dto.model.SubjectModel;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;

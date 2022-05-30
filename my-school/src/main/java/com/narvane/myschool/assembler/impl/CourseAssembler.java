@@ -1,8 +1,8 @@
 package com.narvane.myschool.assembler.impl;
 
 import com.narvane.myschool.assembler.Assembler;
-import com.narvane.myschool.controller.input.CourseInput;
-import com.narvane.myschool.controller.model.CourseModel;
+import com.narvane.myschool.dto.input.CourseInput;
+import com.narvane.myschool.dto.model.CourseModel;
 import com.narvane.myschool.domain.course.Course;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;

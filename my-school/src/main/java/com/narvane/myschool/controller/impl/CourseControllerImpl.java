@@ -2,8 +2,8 @@ package com.narvane.myschool.controller.impl;
 
 import com.narvane.myschool.assembler.Assembler;
 import com.narvane.myschool.controller.CourseController;
-import com.narvane.myschool.controller.input.CourseInput;
-import com.narvane.myschool.controller.model.CourseModel;
+import com.narvane.myschool.dto.input.CourseInput;
+import com.narvane.myschool.dto.model.CourseModel;
 import com.narvane.myschool.domain.course.Course;
 import com.narvane.myschool.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;

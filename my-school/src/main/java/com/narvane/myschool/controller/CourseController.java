@@ -1,8 +1,8 @@
 package com.narvane.myschool.controller;
 
 
-import com.narvane.myschool.controller.input.CourseInput;
-import com.narvane.myschool.controller.model.CourseModel;
+import com.narvane.myschool.dto.input.CourseInput;
+import com.narvane.myschool.dto.model.CourseModel;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;

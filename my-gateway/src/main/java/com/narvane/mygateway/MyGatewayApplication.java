@@ -20,7 +20,6 @@ public class MyGatewayApplication {
 	public RouteLocator myRouter(RouteLocatorBuilder builder) {
 		return builder.routes()
 				.route(p -> p
-						/*.path("/tenant/university-one/my-school/**")*/
 						.path("/my-school/**")
 						.uri(routesProperties.getUrlMySchool()))
 				.route(p -> p
