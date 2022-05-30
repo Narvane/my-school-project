@@ -9,6 +9,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
+import java.util.UUID;
+
 @Service
 public class CourseServiceImpl implements CourseService {
 
@@ -22,11 +25,13 @@ public class CourseServiceImpl implements CourseService {
     }
 
     @Override
+    @Transactional
     public Course save(Course course) {
         return courseRepository.save(course);
     }
 
     @Override
+    @Transactional
     public Course update(Course update) {
 
         Course course = courseRepository.findById(update.getId())
@@ -39,17 +44,20 @@ public class CourseServiceImpl implements CourseService {
     }
 
     @Override
-    public void delete(Long id) {
-        courseRepository.deleteById(id);
+    @Transactional
+    public void delete(String id) {
+        courseRepository.deleteById(UUID.fromString(id));
     }
 
     @Override
-    public Course findById(Long id) {
-        return courseRepository.findById(id)
+    @Transactional
+    public Course findById(String id) {
+        return courseRepository.findById(UUID.fromString(id))
                 .orElseThrow(() -> new ResourceNotFoundException(COURSE_NOT_FOUNDED));
     }
 
     @Override
+    @Transactional
     public Page<Course> findAll(Pageable pageable) {
         return courseRepository.findAll(pageable);
     }

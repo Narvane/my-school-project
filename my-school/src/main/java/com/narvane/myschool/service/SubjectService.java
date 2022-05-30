@@ -10,9 +10,9 @@ public interface SubjectService {
 
     Subject update(Subject subject);
 
-    void delete(Long id);
+    void delete(String id);
 
-    Subject findById(Long id);
+    Subject findById(String id);
 
     Page<Subject> findAll(Pageable pageable);
 

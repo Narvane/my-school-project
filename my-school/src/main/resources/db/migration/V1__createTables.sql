@@ -1,18 +1,18 @@
 
 CREATE TABLE course (
-	id int8 NOT NULL,
+	id UUID NOT NULL,
 	nome varchar(255) NOT NULL,
 	CONSTRAINT course_pkey PRIMARY KEY (id)
 );
 
 CREATE TABLE subject (
-	id int8 NOT NULL,
+	id UUID NOT NULL,
 	nome varchar(255) NOT NULL,
 	CONSTRAINT subject_pkey PRIMARY KEY (id)
 );
 
 CREATE TABLE degree (
-	id int8 NOT NULL,
+	id UUID NOT NULL,
 	nome varchar(255) NOT NULL,
 	course_id int8 NOT NULL,
 	CONSTRAINT degree_pkey PRIMARY KEY (id),
@@ -22,9 +22,8 @@ CREATE TABLE degree (
 );
 
 CREATE TABLE degree_subject (
-	degree_id int8 NOT NULL,
-	subject_id int8 NOT NULL,
-	CONSTRAINT degree_pkey PRIMARY KEY (id)
+	degree_id UUID NOT NULL,
+	subject_id UUID NOT NULL,
 	CONSTRAINT degree_subject_fk
         FOREIGN KEY(degree_id)
             REFERENCES degree(id),
@@ -41,8 +40,8 @@ CREATE SEQUENCE public.hibernate_sequence
     CACHE 1
     NO CYCLE;
 
-ALTER SEQUENCE public.hibernate_sequence OWNER TO postgres;
-GRANT ALL ON SEQUENCE public.hibernate_sequence to postgres;
+ALTER SEQUENCE public.hibernate_sequence OWNER TO keycloak;
+GRANT ALL ON SEQUENCE public.hibernate_sequence to keycloak;
 
 
 
@@ -53,8 +52,8 @@ CREATE SEQUENCE public.course_id_seq
     CACHE 1
     NO CYCLE;
 
-ALTER SEQUENCE public.course_id_seq OWNER TO postgres;
-GRANT ALL ON SEQUENCE public.course_id_seq to postgres;
+ALTER SEQUENCE public.course_id_seq OWNER TO keycloak;
+GRANT ALL ON SEQUENCE public.course_id_seq to keycloak;
 
 
 
@@ -65,8 +64,8 @@ CREATE SEQUENCE public.degree_id_seq
     CACHE 1
     NO CYCLE;
 
-ALTER SEQUENCE public.degree_id_seq OWNER TO postgres;
-GRANT ALL ON SEQUENCE public.degree_id_seq to postgres;
+ALTER SEQUENCE public.degree_id_seq OWNER TO keycloak;
+GRANT ALL ON SEQUENCE public.degree_id_seq to keycloak;
 
 
 
@@ -77,5 +76,5 @@ CREATE SEQUENCE public.subject_id_seq
     CACHE 1
     NO CYCLE;
 
-ALTER SEQUENCE public.subject_id_seq OWNER TO postgres;
-GRANT ALL ON SEQUENCE public.subject_id_seq to postgres;
+ALTER SEQUENCE public.subject_id_seq OWNER TO keycloak;
+GRANT ALL ON SEQUENCE public.subject_id_seq to keycloak;

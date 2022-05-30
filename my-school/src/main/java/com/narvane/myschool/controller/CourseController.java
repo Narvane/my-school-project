@@ -13,9 +13,9 @@ public interface CourseController {
 
     ResponseEntity<CourseModel> updateCourse(CourseInput courseInput);
 
-    ResponseEntity<Void> deleteCourseById(Long id);
+    ResponseEntity<Void> deleteCourseById(String id);
 
-    ResponseEntity<CourseModel> findCourseById(Long id);
+    ResponseEntity<CourseModel> findCourseById(String id);
 
     ResponseEntity<Page<CourseModel>> findAllCourses(int page, int size, Sort.Direction direction, String... properties);
 

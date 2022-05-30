@@ -10,9 +10,9 @@ public interface CourseService {
 
     Course update(Course course);
 
-    void delete(Long id);
+    void delete(String id);
 
-    Course findById(Long id);
+    Course findById(String id);
 
     Page<Course> findAll(Pageable pageable);
 

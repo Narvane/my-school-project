@@ -1,20 +1,17 @@
 package com.narvane.myschool.domain.subject;
 
-import lombok.Getter;
-import lombok.Setter;
+import com.narvane.myschool.domain.EntityWithUUID;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
 
 @Entity
-@Getter
-@Setter
-public class Subject {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "subject_id_seq")
-    @SequenceGenerator(name = "subject_id_seq", sequenceName = "subject_id_seq")
-    @Column(name = "id")
-    private Long id;
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Subject extends EntityWithUUID {
 
     private String name;
 

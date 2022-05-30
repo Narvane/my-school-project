@@ -13,9 +13,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/subject")
@@ -32,7 +32,7 @@ public class SubjectControllerImpl implements SubjectController {
 
     @Override
     @PostMapping
-    public ResponseEntity<SubjectModel> createSubject(@RequestBody @Valid SubjectInput subjectInput) {
+    public ResponseEntity<SubjectModel> createSubject(@RequestBody @Validated SubjectInput subjectInput) {
         return new ResponseEntity<>(
                 assembler.assembleModel(service.save(assembler.assembleEntity(subjectInput))),
                 HttpStatus.CREATED
@@ -41,7 +41,7 @@ public class SubjectControllerImpl implements SubjectController {
 
     @Override
     @PutMapping
-    public ResponseEntity<SubjectModel> updateSubject(@RequestBody @Valid SubjectInput subjectInput) {
+    public ResponseEntity<SubjectModel> updateSubject(@RequestBody @Validated SubjectInput subjectInput) {
         return new ResponseEntity<>(
                 assembler.assembleModel(service.update(assembler.assembleEntity(subjectInput))),
                 HttpStatus.OK
@@ -50,7 +50,7 @@ public class SubjectControllerImpl implements SubjectController {
 
     @Override
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteSubjectById(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteSubjectById(@PathVariable String id) {
         service.delete(id);
         return new ResponseEntity<>(
                 HttpStatus.OK
@@ -59,7 +59,7 @@ public class SubjectControllerImpl implements SubjectController {
 
     @Override
     @GetMapping("/{id}")
-    public ResponseEntity<SubjectModel> findSubjectById(@PathVariable Long id) {
+    public ResponseEntity<SubjectModel> findSubjectById(@PathVariable String id) {
         return new ResponseEntity<>(
                 assembler.assembleModel(service.findById(id)),
                 HttpStatus.OK

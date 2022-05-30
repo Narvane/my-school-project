@@ -12,9 +12,9 @@ public interface SubjectController {
 
     ResponseEntity<SubjectModel> updateSubject(SubjectInput subjectInput);
 
-    ResponseEntity<Void> deleteSubjectById(Long id);
+    ResponseEntity<Void> deleteSubjectById(String id);
 
-    ResponseEntity<SubjectModel> findSubjectById(Long id);
+    ResponseEntity<SubjectModel> findSubjectById(String id);
 
     ResponseEntity<Page<SubjectModel>> findAllSubjects(int page, int size, Sort.Direction direction, String... properties);
 

@@ -1,22 +1,17 @@
 package com.narvane.myschool.domain.course;
 
+import com.narvane.myschool.domain.EntityWithUUID;
 import com.narvane.myschool.domain.subject.Subject;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Getter
-@Setter
-public class Degree {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "degree_id_seq")
-    @SequenceGenerator(name = "degree_id_seq", sequenceName = "degree_id_seq")
-    @Column(name = "id")
-    private Long id;
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Degree extends EntityWithUUID {
 
     private String name;
 

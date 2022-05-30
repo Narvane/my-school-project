@@ -1,4 +1,4 @@
-package com.narvane.myschool.controller;
+package com.narvane.myschool.controller.exception;
 
 import static com.narvane.myschool.constants.ErrorMessagesConstants.*;
 import com.narvane.myschool.exception.AccessDeniedException;

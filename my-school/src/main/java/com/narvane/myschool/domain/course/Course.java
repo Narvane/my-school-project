@@ -1,21 +1,16 @@
 package com.narvane.myschool.domain.course;
 
-import lombok.Getter;
-import lombok.Setter;
+import com.narvane.myschool.domain.EntityWithUUID;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Getter
-@Setter
-public class Course {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "course_id_seq")
-    @SequenceGenerator(name = "course_id_seq", sequenceName = "course_id_seq")
-    @Column(name = "id")
-    private Long id;
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Course extends EntityWithUUID {
 
     private String name;
 
