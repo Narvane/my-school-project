@@ -2,31 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bdab249c-cfa1-43d2-b2cd-d0064046f724" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../db-init-scripts/init.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../initdb.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/my-registration.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_registration/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_registration/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_registration/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_registration/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_registration/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_registration/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_registration/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../my-user/src/main/java/com/narvane/myuser/doimain/model/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -101,7 +78,7 @@
       <updated>1654037093439</updated>
       <workItem from="1654037098469" duration="462000" />
       <workItem from="1654037583363" duration="3089000" />
-      <workItem from="1654051116224" duration="3608000" />
+      <workItem from="1654051116224" duration="3861000" />
     </task>
     <servers />
   </component>

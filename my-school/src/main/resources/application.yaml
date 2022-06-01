@@ -15,7 +15,7 @@ spring:
   datasource:
     url: jdbc:postgresql://postgres:5432/my_school
     username: admin
-    password: ${POSTGRES_PASSWORD}
+    password: default
   flyway:
     baseline-on-migrate: true
     enabled: true
