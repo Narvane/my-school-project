@@ -12,7 +12,6 @@
         <module>my-service-discovery</module>
         <module>my-gateway</module>
         <module>my-school</module>
-        <module>my-user</module>
         <module>my-report</module>
     </modules>
 

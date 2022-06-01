@@ -9,6 +9,7 @@ services:
     image: postgres
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./db-init-scripts:/docker-entrypoint-initdb.d
     environment:
       POSTGRES_DB: postgres
       POSTGRES_USER: admin
@@ -101,16 +102,15 @@ services:
       - my-service-discovery
     networks:
       - my-network
-  my-user:
+  my-registration:
     build:
-      context: ./my-user/
+      context: ./my-registration/
       dockerfile: Dockerfile
-    image: my-user
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./my-registration:/code
     ports:
-      - 8082:8082
-      - 5082:5005
-    environment:
-      - ADDITIONAL_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -Xmx1G -Xms128m -XX:MaxMetaspaceSize=128m
+      - 8000:8000
     depends_on:
       - postgres
       - my-gateway
